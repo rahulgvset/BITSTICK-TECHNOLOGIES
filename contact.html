@@ -54,12 +54,16 @@
       <div class="info-row"><span class="k">Location</span><span class="v">India, remote-first<br><small>Add a city or office address if you want one listed</small></span></div>
       <div class="map-note">Prefer to talk first? Mention it in your message and we'll set up a call instead of going back and forth by email.</div>
     </div>
-    <form class="card" style="border:1px solid var(--line);padding:26px;border-radius:10px;display:grid;gap:16px;" onsubmit="event.preventDefault(); alert('This is a design preview — connect this form to your email (e.g. via Formspree) or a GoDaddy form tool before publishing.');">
+    <form id="contactForm" class="card" style="border:1px solid var(--line);padding:26px;border-radius:10px;display:grid;gap:16px;">
+      <input type="hidden" name="access_key" value="8986c3bf-ec1f-4f14-a824-ad2edf8c395c">
+      <input type="hidden" name="subject" value="New message from bitstick.co.in">
+      <div style="display:none;"><input type="text" name="botcheck"></div>
       <div><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name" required></div>
       <div><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@company.com" required></div>
       <div><label for="company">Company <span style="font-weight:400;text-transform:none;letter-spacing:0;">(optional)</span></label><input id="company" name="company" type="text" placeholder="Company name"></div>
-      <div><label for="msg">What are you looking to build or fix?</label><textarea id="msg" name="message" placeholder="A few lines is plenty"></textarea></div>
-      <button type="submit" class="btn btn-primary" style="justify-self:start;">Send message</button>
+      <div><label for="msg">What are you looking to build or fix?</label><textarea id="msg" name="message" placeholder="A few lines is plenty" required></textarea></div>
+      <button type="submit" id="contactSubmit" class="btn btn-primary" style="justify-self:start;">Send message</button>
+      <p id="contactStatus" style="display:none;font-size:13.5px;margin:0;"></p>
     </form>
   </div>
 </section>
@@ -96,6 +100,47 @@
     navLinks.classList.remove('open');
     navToggle.setAttribute('aria-expanded', false);
   }));
+
+  const contactForm = document.getElementById('contactForm');
+  const contactStatus = document.getElementById('contactStatus');
+  const contactSubmit = document.getElementById('contactSubmit');
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const accessKey = contactForm.access_key.value;
+    if (!accessKey || accessKey.indexOf('PASTE_YOUR') === 0) {
+      contactStatus.style.display = 'block';
+      contactStatus.style.color = 'var(--rust)';
+      contactStatus.textContent = 'Form is not connected yet — the site owner needs to add a Web3Forms access key.';
+      return;
+    }
+    contactSubmit.disabled = true;
+    contactSubmit.textContent = 'Sending…';
+    contactStatus.style.display = 'none';
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(contactForm)))
+      });
+      const result = await res.json();
+      contactStatus.style.display = 'block';
+      if (result.success) {
+        contactStatus.style.color = 'var(--accent)';
+        contactStatus.textContent = "Thanks — your message was sent. We'll reply within one business day.";
+        contactForm.reset();
+      } else {
+        contactStatus.style.color = 'var(--rust)';
+        contactStatus.textContent = 'Something went wrong sending that. Please try again or email us directly.';
+      }
+    } catch (err) {
+      contactStatus.style.display = 'block';
+      contactStatus.style.color = 'var(--rust)';
+      contactStatus.textContent = 'Network error — please try again or email us directly.';
+    } finally {
+      contactSubmit.disabled = false;
+      contactSubmit.textContent = 'Send message';
+    }
+  });
 </script>
 
 </body>
