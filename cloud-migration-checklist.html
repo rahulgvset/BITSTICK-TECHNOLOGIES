@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloud Migration Checklist for Small Business — Bitstick</title>
+<meta name="description" content="A practical, no-jargon cloud migration checklist for small businesses — what to sort out before you even call a provider.">
+<meta name="theme-color" content="#FAFAF7">
+<link rel="canonical" href="/blog/cloud-migration-checklist.html">
+<meta property="og:title" content="Cloud Migration Checklist for Small Businesses">
+<meta property="og:description" content="A practical, no-jargon cloud migration checklist for small businesses — what to sort out before you even call a provider.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bitstick.co.in/blog/cloud-migration-checklist.html">
+<meta property="og:image" content="https://bitstick.co.in/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cloud Migration Checklist for Small Businesses">
+<meta name="twitter:description" content="A practical, no-jargon cloud migration checklist for small businesses — what to sort out before you even call a provider.">
+<meta name="twitter:image" content="https://bitstick.co.in/og-image.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>
+  .article{max-width:720px;margin:0 auto;}
+  .article h2{font-size:24px;margin-top:40px;}
+  .article p{color:var(--ink);font-size:16px;}
+  .article-meta{color:var(--ink-soft);font-size:13.5px;margin-bottom:6px;}
+  .article ul,.article ol{padding-left:20px;color:var(--ink);}
+  .article li{margin-bottom:8px;}
+  .pull{border-left:3px solid var(--accent);padding:4px 0 4px 18px;margin:28px 0;font-family:var(--ff-display);font-size:19px;color:var(--ink);}
+  .lead-magnet{background:var(--accent-soft);border:1px solid var(--line);border-radius:14px;padding:28px 30px;margin:36px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
+  .lead-magnet h3{font-size:18px;margin-bottom:6px;}
+  .lead-magnet p{margin:0;font-size:14px;color:var(--ink-soft);}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cloud Migration Checklist for Small Businesses (Before You Call Anyone)",
+  "description": "A practical, no-jargon cloud migration checklist for small businesses — what to sort out before you even call a provider.",
+  "author": {"@type": "Organization", "name": "BITSTICK TECHNOLOGIES"},
+  "publisher": {"@type": "Organization", "name": "BITSTICK TECHNOLOGIES"},
+  "datePublished": "2026-08-25",
+  "dateModified": "2026-08-25",
+  "mainEntityOfPage": "https://bitstick.co.in/blog/cloud-migration-checklist.html"
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bitstick.co.in/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://bitstick.co.in/blog.html"},{"@type":"ListItem","position":3,"name":"Cloud migration checklist","item":"https://bitstick.co.in/blog/cloud-migration-checklist.html"}]}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "How much does a cloud migration cost for a small business?", "acceptedAnswer": {"@type": "Answer", "text": "Cost depends heavily on the number of systems and their complexity. Get a scoped quote after defining what \"done\" looks like, rather than comparing vague estimates."}},
+    {"@type": "Question", "name": "Should we migrate everything at once or in stages?", "acceptedAnswer": {"@type": "Answer", "text": "Staged migration is almost always lower-risk — moving lower-priority systems first validates the process before anything business-critical moves."}},
+    {"@type": "Question", "name": "What happens if something breaks during migration?", "acceptedAnswer": {"@type": "Answer", "text": "A proper migration plan includes a rollback strategy defined before execution starts, not improvised if something goes wrong."}},
+    {"@type": "Question", "name": "Do we need to choose Azure or AWS before starting?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, ideally during the planning phase — the platform choice affects architecture decisions throughout the rest of the project."}},
+    {"@type": "Question", "name": "How much downtime should we expect?", "acceptedAnswer": {"@type": "Answer", "text": "This depends on your downtime tolerance, which should be defined upfront — some systems can migrate with zero visible downtime, others need a scheduled window."}},
+    {"@type": "Question", "name": "Who manages the environment after migration?", "acceptedAnswer": {"@type": "Answer", "text": "Decide this before the project starts — either your team, the migration provider, or ongoing managed IT services."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <nav class="nav wrap">
+    <a href="/" class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#2F5233"/><path d="M10 21V11h5.2c2.1 0 3.6 1.2 3.6 3.1 0 1.2-.6 2-1.6 2.5 1.2.4 2 1.4 2 2.8 0 2.1-1.6 3.6-3.9 3.6H10Zm2.7-2.2h2.4c1 0 1.6-.5 1.6-1.3s-.6-1.3-1.6-1.3h-2.4v2.6Zm0-4.7h2.1c.9 0 1.4-.4 1.4-1.2s-.5-1.2-1.4-1.2h-2.1v2.4Z" fill="#fff"/></svg>
+      Bitstick
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#approach">Approach</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/blog.html" aria-current="page">Blog</a></li>
+      <li><a href="/careers.html">Careers</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="/contact.html" class="btn btn-ghost">Sign in</a>
+      <a href="/contact.html" class="btn btn-primary">Get a free consult</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<section class="page-head">
+  <div class="wrap article">
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/blog.html">Blog</a> / Cloud migration checklist</div>
+    <span class="label">Cloud</span>
+    <h1>Cloud Migration Checklist for Small Businesses (Before You Call Anyone)</h1>
+    <p class="article-meta">By Bitstick Technologies Team · Published August 25, 2026 · 10 min read</p>
+  </div>
+</section>
+
+<section style="padding-top:8px;">
+  <div class="wrap article">
+
+<p>Most small business cloud migrations don't go over budget because of the cloud. They go over budget because nobody defined the project clearly enough before it started — so scope crept, timelines slipped, and the final invoice looked nothing like the estimate.</p>
+
+<p>The fix for that isn't a better vendor. It's understanding the shape of a migration project before you call anyone, so you walk into that first conversation already knowing what you're actually asking for. This guide walks through the full process — not just a checklist, but what each phase actually involves.</p>
+
+<h2>Why migrations go over budget (it's rarely the technology)</h2>
+
+<p>Cloud platforms themselves are mature and predictable. What isn't predictable is a project where nobody wrote down what "done" means, so the provider keeps discovering new systems that also need migrating, new dependencies that weren't mentioned, and new requirements that show up halfway through. Every one of those discoveries costs time and money — and most of them could have been caught with proper planning up front.</p>
+
+<h2>The seven phases of a small business cloud migration</h2>
+
+<p><strong>Phase 1: Discovery and inventory.</strong> Every server, application, and piece of software currently running, including the ones nobody remembers signing up for. Old internal tools, that one spreadsheet-based system finance still uses, the file server in the closet — all of it needs to be on the list before anyone can scope the work. This phase also maps dependencies: which systems talk to which, and what breaks if one moves before another.</p>
+
+<p><strong>Phase 2: Define what "done" looks like.</strong> Not "move everything to the cloud" — but "these six systems are running on this specific platform, with this level of uptime, by this date." Vague goals produce vague, expanding scopes. This is also where you decide Azure versus AWS if you haven't already — see our <a href="/services/cloud-architecture/" style="color:var(--accent);">Azure vs AWS comparison</a> if you're still deciding.</p>
+
+<p><strong>Phase 3: Security and compliance requirements.</strong> Who needs access to what in the new environment? What compliance requirements apply to your data — and in India, that increasingly means thinking about the <a href="/blog/dpdp-act-compliance-small-business.html" style="color:var(--accent);">DPDP Act</a> if you handle personal data. Bolting security onto a completed migration is always more expensive than designing it in from the start.</p>
+
+<p><strong>Phase 4: Architecture design.</strong> How the new environment is actually structured — networking, access controls, redundancy where it's worth the cost, and cost-optimization decisions made at design time rather than discovered as a surprise bill later.</p>
+
+<p><strong>Phase 5: Migration execution.</strong> The actual move, usually done in stages rather than all at once — lower-risk systems first, to validate the process before touching anything business-critical.</p>
+
+<p><strong>Phase 6: Testing and validation.</strong> Confirming things work as expected in the new environment before cutting over fully, including a rollback plan in case something doesn't.</p>
+
+<p><strong>Phase 7: Cutover and stabilization.</strong> The actual switch, followed by a period of close monitoring — this is when unexpected issues, if any, tend to surface.</p>
+
+<p class="pull">If you can answer what "done" means, what your security requirements are, and your downtime tolerance, you're already ahead of most businesses walking into their first migration conversation.</p>
+
+<h2>Realistic timeline by business size</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:14.5px;">
+<thead>
+<tr style="border-bottom:2px solid var(--accent);">
+<th style="text-align:left;padding:10px 12px;">Business size</th>
+<th style="text-align:left;padding:10px 12px;">Core systems</th>
+<th style="text-align:left;padding:10px 12px;">Typical timeline</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Very small (under 10 people)</td><td style="padding:10px 12px;">1–3 systems</td><td style="padding:10px 12px;">2–4 weeks</td></tr>
+<tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Small (10–50 people)</td><td style="padding:10px 12px;">3–8 systems</td><td style="padding:10px 12px;">4–10 weeks</td></tr>
+<tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Growing (50+ people)</td><td style="padding:10px 12px;">8+ systems, some interdependent</td><td style="padding:10px 12px;">2–4 months</td></tr>
+</tbody>
+</table>
+
+<p>These are directional, not guarantees — actual timelines depend heavily on system complexity and downtime tolerance, not just headcount. If a quote for a small, well-defined migration comes back looking like an enterprise 6–12 month timeline, that's often a sign the provider is sizing the project — and the price — for a bigger company than yours.</p>
+
+<h2>Questions to ask any provider quoting you a migration</h2>
+
+<ul>
+<li>What exactly is included in this quote, and what would trigger additional cost?</li>
+<li>What happens if a system we didn't mention turns out to need migrating too?</li>
+<li>What's the realistic timeline, and what could push it out?</li>
+<li>Who's responsible for the environment after go-live — you or us?</li>
+<li>What does rollback look like if something goes wrong mid-migration?</li>
+<li>How is security handled during the migration itself, not just after?</li>
+</ul>
+
+<h2>When to DIY vs. when to bring someone in</h2>
+
+<p>If you're migrating one or two simple, well-documented systems and you have someone technical in-house, doing it yourself is reasonable. Bring in outside help when: the systems are interdependent in ways that aren't fully mapped, security or compliance requirements are non-trivial, downtime tolerance is low, or nobody on your team has done a migration like this before. The cost of getting outside help is usually smaller than the cost of an extended outage from a migration that went sideways.</p>
+
+<div class="lead-magnet">
+  <div>
+    <h3>Want this as a printable checklist?</h3>
+    <p>One-page PDF version you can fill in before your first call with any provider.</p>
+  </div>
+  <a href="/resources/bitstick-cloud-migration-checklist.pdf" class="btn btn-primary" download>Download the PDF</a>
+</div>
+
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap article">
+    <span class="label">Questions</span>
+    <h2 style="margin-bottom:24px;">Cloud migration — FAQs</h2>
+    <div class="process-list">
+      <div class="step"><span class="step-num">Q</span><div><h4>How much does a cloud migration cost for a small business?</h4><p>Cost depends heavily on the number of systems and their complexity — a single-system migration might be a small, focused project, while an 8+ system migration with interdependencies is substantially more. Get a scoped quote after defining what "done" looks like, rather than comparing vague estimates.</p></div></div>
+      <div class="step"><span class="step-num">Q</span><div><h4>Should we migrate everything at once or in stages?</h4><p>Staged migration is almost always lower-risk — moving lower-priority systems first validates the process before anything business-critical moves.</p></div></div>
+      <div class="step"><span class="step-num">Q</span><div><h4>What happens if something breaks during migration?</h4><p>A proper migration plan includes a rollback strategy defined before execution starts, not improvised if something goes wrong.</p></div></div>
+      <div class="step"><span class="step-num">Q</span><div><h4>Do we need to choose Azure or AWS before starting?</h4><p>Yes, ideally during the planning phase — the platform choice affects architecture decisions throughout the rest of the project.</p></div></div>
+      <div class="step"><span class="step-num">Q</span><div><h4>How much downtime should we expect?</h4><p>This depends entirely on your downtime tolerance, which should be defined upfront — some systems can migrate with zero visible downtime using the right approach, others need a scheduled maintenance window.</p></div></div>
+      <div class="step"><span class="step-num">Q</span><div><h4>Who manages the environment after migration?</h4><p>Decide this before the project starts — either your team, the migration provider, or as ongoing <a href="/services/managed-it/" style="color:var(--accent);">managed IT services</a>.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap" style="text-align:center;">
+    <span class="label" style="display:block;">Ready to scope it properly</span>
+    <h2 style="max-width:480px;margin:0 auto 18px;">Let's map your migration before anything moves</h2>
+    <a href="/contact.html" class="btn btn-primary">Book a free consult</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Bitstick Technologies</div>
+        <p style="max-width:280px;color:var(--ink-soft);font-size:13.5px;margin-top:8px;">Secure infrastructure. Intelligent software. Built for what's next.</p>
+      </div>
+      <ul class="foot-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/locations/software-consulting-india/">Why India</a></li>
+        <li><a href="/services/managed-it/">Managed IT</a></li>
+        <li><a href="/services/cloud-architecture/">Cloud</a></li>
+        <li><a href="/services/ai-integration/">AI</a></li>
+        <li><a href="/services/cloud-security-audit/">Security</a></li>
+        <li><a href="/services/custom-software-development/">App Dev</a></li>
+        <li><a href="/services/network-design/">Network</a></li>
+        <li><a href="/services/it-consulting/">IT Consulting</a></li>
+        <li><a href="/case-studies/">Case Studies</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/careers.html">Careers</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Bitstick Technologies. All rights reserved.</span>
+      <span>bitstick.co.in</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+</script>
+
+</body>
+</html>
