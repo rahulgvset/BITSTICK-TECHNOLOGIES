@@ -2,14 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://bitstick.co.in/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://bitstick.co.in/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://bitstick.co.in/why-india.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://bitstick.co.in/managed-it-services.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://bitstick.co.in/cloud-azure-aws.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://bitstick.co.in/ai-integration.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://bitstick.co.in/cybersecurity.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://bitstick.co.in/application-development.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://bitstick.co.in/network-design.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://bitstick.co.in/it-consulting.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://bitstick.co.in/locations/software-consulting-india/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://bitstick.co.in/services/managed-it/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://bitstick.co.in/services/cloud-architecture/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://bitstick.co.in/services/ai-integration/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://bitstick.co.in/services/cloud-security-audit/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://bitstick.co.in/services/custom-software-development/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://bitstick.co.in/services/network-design/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://bitstick.co.in/services/it-consulting/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://bitstick.co.in/case-studies/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://bitstick.co.in/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://bitstick.co.in/blog/enterprise-vs-small-business-it-provider.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://bitstick.co.in/blog/cybersecurity-audit-warning-signs.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
